@@ -16,10 +16,7 @@ public class User {
     private String name;
 
     @Column
-    private String groups;
-
-    @Column
-    private String number;
+    private boolean proceeding;
 
     public Long getId() {
         return id;
@@ -37,19 +34,11 @@ public class User {
         this.name = name;
     }
 
-    public String getGroups() {
-        return groups;
+    public boolean isProceeding() {
+        return proceeding;
     }
 
-    public void setGroups(String groups) {
-        this.groups = groups;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
+    public void setProceeding(boolean proceeding) {
+        this.proceeding = proceeding;
     }
 }

@@ -42,8 +42,7 @@ public class UserService {
 
         if(U.isPresent()){
             User e = U.get();
-            e.setGroups(user.getGroups());
-            e.setNumber(user.getNumber());
+            e.setProceeding(user.isProceeding());
             userRepository.save(e);
         }
     }

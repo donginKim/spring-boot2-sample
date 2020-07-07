@@ -30,12 +30,12 @@ public class ViewController {
     }
 
     @RequestMapping(value = "/users/add", method = RequestMethod.PUT)
-    public void addUser(User user){
+    public void addUser(@RequestBody User user){
         userService.save(user);
     }
 
     @RequestMapping(value = "/users/{id}", method = RequestMethod.PATCH)
-    public void updateUser(@PathVariable("id") long id, User user){
+    public void updateUser(@PathVariable("id") long id, @RequestBody User user){
         userService.updateById(id, user);
     }
 

@@ -25,7 +25,6 @@ public class UserService {
     private UserRepository userRepository;
 
     public List<User> listAllUsers(){
-        logger.debug(new Date() + "call listAllUsers method");
         return userRepository.findAll();
     }
 
